@@ -1,0 +1,73 @@
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sauce+One:wght@400;600;700&display=swap');
+
+ .why-section {
+  background-color: #fcf29f; 
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.why-heading {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #2d1b16;
+  margin-bottom: 3rem;
+}
+
+.why-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+
+}
+
+.why-card {
+  background-color: white;
+  border: 1px solid #000;
+  border-radius: 1.5rem;
+  width: 180px;
+  height: 400px !important;
+  max-height: 100%;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.why-icon {
+  width: 60px;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.why-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #2d1b16;
+  margin: 0;
+}
+
+.why-desc {
+  font-family: 'Open Sauce One', Arial, serif;
+  font-size: 1.25rem;
+  color: #000000;
+  margin: 0;
+} 
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .why-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .why-card {
+    width: 60%;
+    height: 275px !important;
+  }
+}

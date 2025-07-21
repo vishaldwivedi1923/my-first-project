@@ -1,0 +1,166 @@
+.play-section {
+  background-color: #fff7ef;
+  padding: 80px 20px;
+}
+
+.play-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 5rem ;
+}
+
+.play-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.play-location {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #321d1d;
+  font-size: 16px;
+}
+
+.play-icon {
+  font-size: 22px;
+  margin-right: 8px;
+}
+
+.location-text {
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.play-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #321d1d;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.play-step {
+  font-size: 40px;
+  font-weight: 300;
+  color: #321d1d;
+}
+
+.play-step strong {
+  font-weight: 700;
+}
+
+.play-courts {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.court-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+.image-wrapper {
+  border-radius: 40px;
+  border: 1.3px solid #000;
+  overflow: hidden;
+  box-shadow: 0 0 0 4px #fff7ef;
+}
+
+.image-wrapper img {
+  padding: 5px;
+  width: 98%;
+  height: auto;
+  display:block;
+  border-radius: 40px;
+}
+
+.court-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 20px;
+  padding: 0 10px;
+  gap: 20px;
+}
+
+.court-details {
+  flex: 1;
+}
+
+.court-details h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #321d1d;
+}
+
+.court-details p {
+  margin: 4px 0 0;
+  font-size: 16px;
+  color: #442416;
+}
+
+.court-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-btn {
+  font-family: 'Phudu', serif;
+  width: 50px;
+  height: 50px;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #321d1d;
+  border-width: 2px 2px thick;
+  color: #321d1d;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.choose-btn {
+  font-family: 'Phudu', serif;
+  background-color: #fff;
+  color: #321d1d;
+  font-weight: 800;
+  font-size: 20px;
+  padding: 11px 20px;
+  border-radius: 30px;
+  border: 2px solid #321d1d;
+  border-width: 2px 2px thick;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.choose-btn:hover,
+.info-btn:hover {
+  background-color: #f0e6da;
+}
+
+@media (max-width: 768px) {
+  .play-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .court-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .court-actions {
+    margin-top: 10px;
+  }
+}

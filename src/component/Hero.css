@@ -1,0 +1,150 @@
+/* Hero Section */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sauce+One:wght@400;600;700&display=swap');
+
+.hero {
+  background-color: #fff7ee; /* Soft cream tone */
+  color: #2d1c1a; /* Deep brown for text */
+  padding: 3rem 2rem;
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Hero Title */
+.hero-title {
+  font-size: 8rem;
+  font-weight: 900;
+  color: #321d1d;
+  margin: 0;
+  line-height: 1.1;
+}
+
+/* Hero Subtext */
+.hero-subtext {
+  font-family: 'Open Sauce One', Arial, serif;
+  color: #000;
+  max-width: 600px;
+  font-size: 1.2rem;
+  margin: 2rem 0;
+  line-height: 1.6;
+}
+/* Button Container */
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Primary and Secondary Buttons */
+.hero-btn {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: .6rem 1rem;
+  border: 2px solid #321d1d;
+  border-width: 2px 2px thick;
+  background-color: transparent;
+  color: #2d1c1a;
+  border-radius: 1.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  
+}
+.hero-btn.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  border-radius: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Arrow icons */
+.arrow {
+  font-size: 1.25rem;
+}
+
+/* Optional: Marquee if used */
+
+  .marquee {
+  background-color: #321d1d;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 1rem 0;
+  position: absolute;
+  bottom: 0;
+  margin-left: -35px;
+  margin-top: 50px;
+  width: 100%;
+
+}
+
+.marquee-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  animation: scroll-left 10s linear infinite;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.marquee-content span {
+  white-space: nowrap;
+}
+
+.marquee-content img {
+  width: 32px;
+  height: 30px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}  
+
+ 
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero{
+    height: 70vh;
+    justify-content: center;
+  }
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+  }
+
+  .hero-btn.secondary {
+    position: static;
+    transform: none;
+    margin-top: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+

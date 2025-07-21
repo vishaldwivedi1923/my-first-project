@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sauce+One:wght@400;600;700&display=swap');
+
+.start-section {
+  background-color: #fef5ea;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.start-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #2d1b16;
+  margin-bottom: 1rem;
+}
+
+.start-icon {
+  font-size: 2rem;
+}
+
+.start-heading {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #2d1b16;
+  margin-bottom: 3rem;
+  line-height: 1.2;
+}
+
+/* Cards Section */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  width: 300px;
+  max-width: 100%;
+  height: 28rem;
+  max-height: 41rem;
+  border-radius: 1.5rem;
+  /* padding: 1.5rem; */
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+.card-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #2d1b16;
+  margin-bottom: 0.5rem;
+}
+
+.card-desc {
+  font-family: 'Open Sauce One', Arial, serif;
+  font-size: 1.25rem;
+  color: #000000;
+  margin-bottom: 1.5rem;
+}
+
+.card-btn {
+  font-family: 'Phudu', serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 2px solid #321d1d;
+  border-radius: 5rem;
+  border-width: 2px 2px thick;
+  padding: 0.65rem 1.25rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #321d1d;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+  margin-left: 25px;
+  margin-right: 25px;
+  
+}
+
+.card-btn:hover {
+  background: #2d1b16;
+  color: #fff;
+}
+
+/* Card Colors */
+.card-orange {
+  background-color: #ffe0c6;
+}
+
+.card-yellow {
+  background-color: #fff07f;
+}
+
+.card-blue {
+  background-color: #c6e3ff;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 70%;
+    height: auto;
+    padding: 3rem;
+  }
+}
+.card-img1,.card-img2,.card-img3{
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  margin-top: -2.5rem;
+}
+
+@media (max-width: 768px) {
+  .start-heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    width: 70%;
+    height: auto;
+    padding: 3rem;
+  }
+
+  .card-btn {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .card-img1, .card-img2, .card-img3 {
+     margin-left: -1.5rem;
+     margin-right: -1.5rem;
+     margin-top: -2.5rem;
+  }
+}
+

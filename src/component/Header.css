@@ -1,0 +1,153 @@
+/* src/components/Header.css */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sauce+One:wght@400;600;700&display=swap');
+
+ .header {
+  position: relative;
+  background-color: #d0e7f1;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #321d1d;
+}
+
+.logo {
+
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2d1b16;
+}
+
+.logo-o {
+  text-decoration: underline;
+}
+
+.logo .logo-img{
+  width: 150px;
+  height: 66px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  font-weight: bold;
+  color: #2d1b16;
+}
+
+.nav a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #321d1d;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.divider {
+  height: 2.75rem;
+  width: .125rem;
+  background: #321d1d;
+  opacity: .2;
+}
+
+.menu-btn,.close-btn {
+  display: none;
+  background-color: #fff;
+  color: #321d1d;
+  border: 2px solid #321d1d;
+  border-width: 2px 2px thick;
+  padding: 0.6rem 1rem;
+  border-radius: 50px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 2rem;
+  right: 4rem;
+  width: 55px;
+  height: 48px;
+  font-size: 1.3rem;
+  border-radius: 50%;
+}
+
+.menu-icon {
+  font-size: 1.2rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .menu-btn,
+  .close-btn {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 92%;
+    max-width: 100%;
+    flex-direction: column;
+    background-color: #fef6ef;
+    padding: 2.5rem 1.5rem 1.5rem;
+    border-radius: 0 0 3rem 3rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    z-index: 1500;
+    display: none;
+    gap: 1.5rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+
+  .nav.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav a {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2d1b16;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+
+  .nav a:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #d6cdc2;
+  }
+
+  .icon img {
+    width: 30px;
+    height: 30px;
+    margin-right: 12px;
+  }
+
+  .divider {
+    display: none;
+  }
+}
