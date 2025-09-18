@@ -37,7 +37,6 @@
   align-items: center;
   justify-content: center;
 } 
-
 .input-group {
   margin: 1rem 0;
   width: 100%;
@@ -48,8 +47,7 @@
   font-size: 0.75rem;
   color: #c4a8a8;
   margin-left: 0.5rem;
-}
-
+} 
 .input-wrapper {
   display: flex;
   align-items: center;
@@ -177,5 +175,53 @@
 
   .login-btn {
     padding: 0.6rem;
+  }
+}
+
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Top Success Box */
+.top-success-box {
+  position: relative;
+  margin-bottom: 16px;
+  background-color: #d1f8e3;
+  color: #207d4c;
+  padding: 14px 40px 14px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  animation: slideFade 0.4s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Close (X) Button */
+.top-success-box .close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #207d4c;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Reuse animation */
+@keyframes slideFade {
+  from {
+    transform: translateY(-12px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
