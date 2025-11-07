@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sauce+One:wght@400;600;700&display=swap');
 
 .hero {
-  background-color: #fff7ee; /* Soft cream tone */
-  color: #2d1c1a; /* Deep brown for text */
+  background-color: #fff7ee; 
+  color: #2d1c1a; 
   padding: 3rem 2rem;
-  height: 120vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -125,18 +125,20 @@
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .hero{
-    height: 70vh;
+    height: 55vh;
     justify-content: center;
+    background-color: #d0e7f1;
   }
   .hero-title {
-    font-size: 3rem;
+    font-size: 5rem;
   }
 
   .hero-subtext {
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
 
   .hero-btn.secondary {
+    display: none;
     position: static;
     transform: none;
     margin-top: 1rem;
