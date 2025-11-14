@@ -8,7 +8,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin: 5rem ;
+  margin: 5rem 2rem;
 }
 
 .play-header-left {
@@ -54,31 +54,35 @@
   font-weight: 700;
 }
 
-.play-courts {
+ .play-courts {
   display: flex;
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
+  align-items: stretch;
+  margin-top: 2rem;
 }
 
-.court-card {
+ .court-card {
   display: flex;
   flex-direction: column;
-  max-width: 500px;
-}
+  max-width: 600px;
+} 
 
 .image-wrapper {
+  width: 100%;
+  height: 400px;
   border-radius: 40px;
   border: 1.3px solid #000;
   overflow: hidden;
   box-shadow: 0 0 0 4px #fff7ef;
-}
-
-.image-wrapper img {
   padding: 5px;
-  width: 98%;
-  height: auto;
-  display:block;
+}
+ .image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
   border-radius: 40px;
 }
 
@@ -116,7 +120,7 @@
 
 .info-btn {
   font-family: 'Phudu', serif;
-  width: 50px;
+  width: 45px;
   height: 50px;
   font-size: 22px;
   font-weight: bold;
@@ -146,8 +150,7 @@
 .choose-btn:hover,
 .info-btn:hover {
   background-color: #f0e6da;
-}
-
+} 
 @media (max-width: 768px) {
   .play-header {
     flex-direction: column;
@@ -164,3 +167,581 @@
     margin-top: 10px;
   }
 }
+
+.datetime-section {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.date-cards {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 2rem 5rem;
+}
+
+.date-card {
+  background: #fff7ee;;
+  border-radius: 20px;
+  padding: 10px;
+  width: 80px;
+  text-align: center;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: 0.2s;
+} 
+
+.date-card .day {
+  font-size: 1.2rem; /* increase this (e.g. 1.2rem or 1.4rem) */
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* 👇 Date number */
+.date-card h3 {
+  font-size: 3rem; /* increase this to make date bold & large */
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.note {
+  text-align: center;
+  font-weight: 600;
+  margin: 2rem 0;
+}
+
+.time-slots {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.slot-card {
+  width: 250px;
+  border-radius: 25px;
+  padding: 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  color: #321d1d;
+}
+
+.morning {
+  background-color: #e6f9e7;
+}
+
+.afternoon {
+  background-color: #fff4d4;
+}
+
+.evening {
+  background-color: #ffe0e0;
+}
+
+.continue-btn {
+  box-sizing: border-box;
+  line-height: 1.15;
+  margin: 20px auto;
+  outline: none;
+  background: #fff;
+  border: 2px solid #321d1d;
+  border-width:  2px 2px thick;
+  border-radius: 50px;
+  color: #321d1d;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.65rem 1.25rem;
+  text-transform: uppercase;
+
+  /* 👇 Important changes */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers content */
+  gap: 3rem; /* adds space between text and arrow */
+  
+  max-width: 27.5rem;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+.arrow {
+  font-size: 1.25rem;
+}
+
+.continue-btn:hover {
+  background-color: #442416;
+  color: #fff; /* optional, for contrast */
+}
+.continue-btn:hover .arrow{
+  color: #fff;
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.time-slot-section {
+  background-color: #fff7ef;
+  padding: 60px 20px 100px;
+  text-align: center;
+}
+
+.time-slot-note {
+  color: #321d1d;
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.time-slot-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.time-card {
+  border-radius: 25px;
+  padding: 30px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+.time-card.morning {
+  background-color: #d6edce;
+}
+
+.time-card.afternoon {
+  background-color: #fcea9b;
+}
+
+.time-card.evening {
+  background-color: #f8b4b4;
+}
+
+.time-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.time-icon {
+  font-size: 28px;
+  color: #321d1d;
+}
+
+.time-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #321d1d;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #321d1d;
+}
+
+.time-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  width: 100%;
+}
+
+.time-btn {
+  border: 1.2px solid #666;
+  border-radius: 10px;
+  padding: 12px 0;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #321d1d;
+  background-color: #fff7ef;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.time-btn:hover {
+  background-color: #f0e6da;
+}
+
+.time-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #e8e1dc;
+}
+
+@media (max-width: 768px) {
+  .time-slot-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .time-card {
+    width: 90%;
+  }
+}
+.calendar-container {
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin-bottom: 1rem;
+}
+.calendar-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera ke liye */
+}
+
+.date-cards {
+  display: flex;
+  gap: 1rem;
+  min-width: max-content;
+  padding-bottom: 0.5rem;
+}
+
+.date-card {
+  flex: 0 0 auto;
+  background: #fff7ee;
+  border-radius: 1rem;
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 0.8rem 1.2rem;
+  width: 80px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.date-card.active {
+  background: #321d1d;
+  color: #fff;
+}
+.date-card.active .day,
+.date-card.active h3{
+  color: #fff;
+}
+
+.date-card:hover {
+  background: #321d1d;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.date-card:hover .day,
+.date-card:hover h3 {
+  color: #fff;
+}
+
+
+/* ---------- INFO PAGE STYLE ---------- */
+.info-section {
+  background: #fbf4eb;
+  border-radius: 15px;
+  padding: 40px 60px;
+  position: relative;
+  min-height: 100vh;
+}
+ .info-close {
+  position: absolute;
+  top: 25px;
+  right: 45px;
+  background-color: #fff;        
+  border: 2px solid #333; 
+  border-width: 2px 2px thick;
+  color: #000;                   
+  font-size: 22px;              
+  width: 45px;                   
+  height: 45px;
+  border-radius: 50%;            
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.info-close:hover {
+  background-color: #f04e23;     
+  color: #fff;
+  border-color: #f04e23;
+  transform: scale(1.05);
+}
+
+
+.info-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2b1b12;
+  margin-bottom: 6px;
+}
+
+.info-subtitle {
+  text-align: center;
+  color: #42291b;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.info-section hr {
+  border: 0;
+  border-top: 1px solid #c8b9a5;
+  margin: 20px 0 40px;
+}
+
+.info-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* LOCATION BOX */
+.info-location-box {
+  background: #e8dc88;
+  flex: 1;
+  border-radius: 25px;
+  padding: 20px 30px;
+  position: relative;
+  min-width: 320px;
+}
+
+.info-location-box h3 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #2b1b12;
+}
+
+.info-location-box p {
+  font-size: 20px;
+  color: #2b1b12;
+}
+
+.map-btn {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  background: #fff;
+  border: 2px solid #2b1b12;
+  border-width: 2px 2px thick;
+  border-radius: 50%;
+  width: 55px;
+  height: 50px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* FACILITIES */
+.info-facilities {
+  flex: 1;
+  min-width: 300px;
+}
+
+.info-facilities h3 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #2b1b12;
+}
+
+.facility-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.facility-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 10px 15px;
+}
+
+.facility-item img {
+  width: 60px;
+  height: 60px;
+}
+
+.facility-item p {
+  font-weight: 500;
+  font-size: 16px;
+  color: #2b1b12;
+}
+
+/* GALLERY */
+.gallery-heading {
+  font-size: 22px;
+  font-weight: 800;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: #2b1b12;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 30%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+
+
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  width: 90%;
+  max-width: 600px;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.modal-content h2 {
+  font-size: 1.6rem;
+  color: #222;
+}
+
+.court-location {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.facilities-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.facilities-list li {
+  background: #f1f1f1;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.gallery {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  overflow-x: auto;
+}
+
+.gallery img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+/* Modal background */
+.info-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal box */
+.info-modal-content {
+  background: #fff;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 900px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 25px;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+

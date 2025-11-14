@@ -11,11 +11,6 @@ const Header = ({ setActivePage }) => {
     setMenuOpen(false);
   };
 
-  // const handleLoginClick = () => {
-  //   setActivePage("login"); // Optional: handle login page too
-  //   setMenuOpen(false);
-  // };
-
   return (
     <header className="header">
       <div className="logo">

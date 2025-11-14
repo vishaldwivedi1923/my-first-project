@@ -2,7 +2,7 @@
 import React from 'react';
 import './Hero.css';
 
-const Hero = () => {
+const Hero =  ({ setActivePage })  => {
   return (
     <section className="hero">
       <h1 className="hero-title">
@@ -13,7 +13,7 @@ const Hero = () => {
       </p>
 
       <div className="hero-buttons">
-        <button className="hero-btn">
+        <button className="hero-btn" onClick={() => setActivePage("signupPage")} >
           REGISTER NOW TO BOOK 
           <span className="arrow"><img src="https://dinkpickleball.in/static/media/rightArrow.ed19853dc4ba5c77f3ea1818551f795c.svg" /></span>
         </button>

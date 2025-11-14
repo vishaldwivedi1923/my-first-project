@@ -1,6 +1,4 @@
-/* src/component/Login.css */
-
-.login-container {
+ .login-container {
   width: 100%;
   min-height: 100vh;
   background-color: #fff7ee;
@@ -13,32 +11,48 @@
 }
 
 
-
-  .login-header {
+.login-header {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1rem;
+  justify-content: center;
+  width: 100%;
+  max-width: 370px;
+  margin-bottom: 5px;
 }
 
- .back-btn {
+.login-title {
+  font-family: phudu, serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #321d1d;
+  letter-spacing: 1px;
+}
+
+
+.back-btn {
   position: absolute;
-  left: 35%;
+  top: 50%;
+  transform: translateY(-50%);
   background: #fff;
   border: 2px solid #321d1d;
-  border-width: 2px 2px thick;
   color: #321d1d;
-  border-radius: 46%;
-  width: 58px;
+  border-radius: 10%;
+  width: 35px;
   height: 45px;
   font-size: 1.2rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-} 
+}
+form {
+  width: 100%;
+  max-width: 400px;
+}
+
 .input-group {
-  margin: 1rem 0;
+  margin:  0;
   width: 100%;
   max-width: 400px;
 }
@@ -47,7 +61,8 @@
   font-size: 0.75rem;
   color: #c4a8a8;
   margin-left: 0.5rem;
-} 
+}
+
 .input-wrapper {
   display: flex;
   align-items: center;
@@ -73,6 +88,7 @@
   cursor: pointer;
 }
 
+
 .options-row {
   display: flex;
   justify-content: space-between;
@@ -82,6 +98,7 @@
   max-width: 400px;
   width: 100%;
 }
+
 
 .custom-checkbox {
   position: relative;
@@ -100,7 +117,6 @@
   cursor: pointer;
 }
 
-/* Circle style */
 .custom-checkbox .checkmark {
   position: absolute;
   left: 0;
@@ -112,19 +128,26 @@
   border: 2px solid #bfbfc0;
   border-radius: 50%;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Show orange checkmark when checked */
+/* When checked */
+.custom-checkbox input:checked + .checkmark {
+  background-color: #000;      
+  border-color: #000;
+}
+
+/* Checkmark styling when checked */
 .custom-checkbox input:checked + .checkmark::after {
   content: '✓';
-  position: absolute;
-  left: 3px;
-  top: -1px;
-  font-size: 14px;
-  color: orange;
+  font-size: 16px;             
+  font-weight: 800;            
+  color: orange;               
+  position: static;            
 }
 
-/* Optional hover effect */
 .custom-checkbox:hover .checkmark {
   border-color: orange;
 }
@@ -136,14 +159,15 @@
   font-weight: bold;
 }
 
+
 .login-btn {
-  font-family: phudu,serif;
+  font-family: phudu, serif;
   background: #fff;
-  border: 2px solid #321d1d;
+  border: 1px solid #321d1d;
   border-width: 2px 2px thick;
   color: #321d1d;
   border-radius: 50px;
-  padding: 1rem;
+  padding: 0.7rem;
   width: 100%;
   max-width: 400px;
   font-weight: bold;
@@ -151,6 +175,7 @@
   cursor: pointer;
   margin: 1rem 0;
 }
+
 
 .signup-text {
   text-align: center;
@@ -164,6 +189,7 @@
   text-decoration: none;
 }
 
+
 @media (max-width: 480px) {
   .login-container {
     padding: 1rem;
@@ -176,6 +202,15 @@
   .login-btn {
     padding: 0.6rem;
   }
+
+  .back-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .login-title {
+    font-size: 1.4rem;
+  }
 }
 
 
@@ -186,7 +221,7 @@
   display: block;
 }
 
-/* Top Success Box */
+
 .top-success-box {
   position: relative;
   margin-bottom: 16px;
@@ -200,7 +235,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Close (X) Button */
+
 .top-success-box .close-btn {
   position: absolute;
   top: 8px;
@@ -214,7 +249,7 @@
   line-height: 1;
 }
 
-/* Reuse animation */
+
 @keyframes slideFade {
   from {
     transform: translateY(-12px);
