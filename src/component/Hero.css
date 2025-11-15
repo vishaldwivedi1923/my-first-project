@@ -149,3 +149,24 @@
     align-items: flex-start;
   }
 } 
+@media (max-width: 480px) {
+.hero{
+    height: 40vh;
+    padding: 1rem 1rem;
+    justify-content: center;
+    background-color: #d0e7f1;
+  }
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .hero-subtext {
+    font-size: 1.6rem;
+  }
+
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
