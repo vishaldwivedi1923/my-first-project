@@ -210,4 +210,26 @@
     padding: 0.3rem;
   }
 }
+@media (max-width: 480px) {
+.social-media-wrapper {
+    gap: 0.7rem;
+    padding: 0.3rem 0rem;
+  }
 
+  .follow-along {
+    font-size: 0.6rem;
+  }
+   .follow-title{
+    font-size: 1rem;
+   }
+  .social-icons {
+    gap: 0.5rem;
+  }
+
+  .social-icons a img {
+    width: 28px;
+    height: 28px;
+    padding: 0.2rem;
+  }
+
+}
