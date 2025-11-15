@@ -748,75 +748,6 @@
   }
 }
 
- /* @media (max-width: 480px) {
-  .modal-content {
-    padding: 18px ;
-    max-height: 90vh;
-  }
-
-  .modal-content h2 {
-    font-size: 1.4rem;
-  }
-
-  .gallery img {
-    width: 100px;
-    height: 70px;
-  }
-} */
-@media (max-width: 768px) {
-  .modal-content {
-    width: 95%;
-    border-radius: 14px;
-  }
-
-  .gallery img {
-    width: 130px;
-    height: 85px;
-  }
-} 
-
-
-/* Very small screens – under 480px */
-/* @media (max-width: 480px) {
-  .info-section {
-    padding: 20px 15px;
-  }
-
-  .info-title {
-    font-size: 20px;
-  }
-
-  .info-subtitle {
-    font-size: 13px;
-  }
-
-  .info-close {
-    width: 36px;
-    height: 36px;
-    font-size: 18px;
-    top: 10px;
-    right: 12px;
-  }
-
-  .map-btn {
-    width: 45px;
-    height: 45px;
-    right: 15px;
-  }
-
-  .gallery-grid {
-    gap: 12px;
-  }
-
-  .gallery-grid img {
-    width: 100%;
-  }
-
-} */
-
-/* ============================= */
-/* Strict mobile fix (under 480) */
-/* ============================= */
 @media (max-width: 480px) {
 
   /* Top Section */
@@ -839,34 +770,16 @@
     top: 10px;
     right: 12px;
   }
-
-  /* ===== LOCATION BOX FIX ===== */
-  .location-box {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
+   .info-location-box {
     padding: 14px 12px;
-    width: 100%;
   }
 
-  .location-icon {
-    min-width: 35px;
+  .info-location-box h3 {
+    font-size: 25px;
   }
 
-  .location-text {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  .location-text h4 {
-    font-size: 15px;
-    margin: 0;
-  }
-
-  .location-text p {
-    font-size: 13px;
-    margin: 0;
+  .info-location-box p {
+    font-size: 16px;
   }
 
   /* View on Map Button */
@@ -882,7 +795,7 @@
     align-items: flex-start;
     gap: 12px;
     padding: 14px 12px;
-    width: 100%;
+    width: 80%;
   }
 
   .facility-icon {
@@ -912,25 +825,6 @@
 
   .gallery-grid img {
     width: 100%;
-  }
-
-  /* ===== CTA BOX FIX ===== */
-  .cta-box {
-    padding: 14px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 10px;
-    width: 100%;
-  }
-
-  .cta-box .price {
-    font-size: 18px;
-  }
-
-  .cta-box button {
-    padding: 12px 18px;
-    font-size: 14px;
   }
 
 }
