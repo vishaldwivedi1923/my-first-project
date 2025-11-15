@@ -1,7 +1,7 @@
 /* Hero Section */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sauce+One:wght@400;600;700&display=swap');
 
-.hero {
+ .hero {
   background-color: #fff7ee; 
   color: #2d1c1a; 
   padding: 3rem 2rem;
@@ -11,7 +11,7 @@
   position: relative;
 }
 
-/* Hero Title */
+
 .hero-title {
   font-size: 8rem;
   font-weight: 900;
@@ -20,7 +20,7 @@
   line-height: 1.1;
 }
 
-/* Hero Subtext */
+
 .hero-subtext {
   font-family: 'Open Sauce One', Arial, serif;
   color: #000;
@@ -29,7 +29,7 @@
   margin: 2rem 0;
   line-height: 1.6;
 }
-/* Button Container */
+
 .hero-buttons {
   display: flex;
   gap: 1.5rem;
@@ -37,7 +37,7 @@
   align-items: center;
 }
 
-/* Primary and Secondary Buttons */
+
 .hero-btn {
   font-size: 1rem;
   font-weight: 700;
@@ -68,12 +68,12 @@
   margin-bottom: 3rem;
 }
 
-/* Arrow icons */
+
 .arrow {
   font-size: 1.25rem;
 }
 
-/* Optional: Marquee if used */
+
 
   .marquee {
   background-color: #321d1d;
@@ -122,8 +122,8 @@
 
 
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
+
+ @media (max-width: 768px) {
   .hero{
     height: 55vh;
     justify-content: center;
@@ -148,5 +148,4 @@
     flex-direction: column;
     align-items: flex-start;
   }
-}
-
+} 

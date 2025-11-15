@@ -71,3 +71,69 @@
     height: 275px !important;
   }
 }
+
+@media (max-width: 480px) {
+
+  .why-section {
+    padding: 2rem 1rem;
+    background: #fcf29f;
+  }
+
+  .why-heading {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+  }
+
+  /* Cards column layout */
+  .why-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  /* Remove card box */
+  .why-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Icon left fixed */
+  .why-icon {
+    width: 48px !important;
+    height: auto !important;
+    margin: 0 !important;
+    flex-shrink: 0;
+  }
+
+  /* Title + desc right */
+  .why-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .why-title {
+    font-size: 1.25rem !important;
+    font-weight: 800;
+    margin: 0;
+    color: #2d1b16;
+  }
+
+  .why-desc {
+    font-size: 1rem !important;
+    margin: 0;
+    line-height: 1.3;
+    color: #000;
+  }
+}
